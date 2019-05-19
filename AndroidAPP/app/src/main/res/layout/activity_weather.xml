@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="WeatherActivity">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/black"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/weatherbg" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="242dp"
+            android:layout_height="72dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="230dip"
+            android:layout_marginTop="233dp"
+            android:textColor="@color/paleturquoise"
+            android:textSize="20dp" />
+
+        <ImageButton
+
+            android:id="@+id/voice"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_above="@+id/tip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/voice_style"
+            android:padding="0dip"
+            android:scaleType="centerInside"
+            android:src="@drawable/voice"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_above="@+id/voice"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:background="#00000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:color/white" />
+
+        <EditText
+            android:id="@+id/normal"
+            android:layout_width="71dp"
+            android:layout_height="36dip"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="72dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:gravity="center"
+            android:hint="识别结果"
+            android:padding="5dip"
+            android:singleLine="true"
+            android:textColorHint="#AFEEEE"
+            android:textSize="15dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.043" />
+
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:text="按下说话"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="164dp"
+            tools:layout_editor_absoluteY="441dp" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/normal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:gravity="center_horizontal"
+            android:inputType="numberDecimal"
+            android:text=""
+            android:textColor="@color/orangered"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/wendu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/content"
+            android:layout_below="@+id/name"
+            android:background="@null"
+            android:textColor="@color/greenyellow"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/shidu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/wendu"
+            android:layout_alignBottom="@+id/wendu"
+            android:layout_toEndOf="@+id/normal"
+            android:textColor="@color/greenyellow"
+            android:background="@null"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/content"
+            android:layout_below="@+id/wendu"
+            android:layout_marginTop="26dp"
+            android:background="@null"
+            android:textColor="#00BFFF"
+            android:textSize="15dp" />
+
+
+        <EditText
+            android:id="@+id/low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/high"
+            android:layout_alignBottom="@+id/high"
+            android:layout_toEndOf="@+id/name"
+            android:background="@null"
+            android:textColor="#00BFFF" />
+
+
+        <TextView
+            android:id="@id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:text="智能天气预报"
+            android:textColor="#ffffffff"
+            android:textSize="25.0dip" />
+
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

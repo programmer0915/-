@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Dream</string>
+    <string name="start_record">开始识别</string>
+    <string name="stop_record">停止识别</string>
+    <string name="parse_process">正在解析...</string>
+    <string name="parse_result">解析结果</string>
+
+    <drawable name="ib_normal">#FFFFFF</drawable>
+    <drawable name="ib_pressed">#E9E9E9</drawable>
+</resources>

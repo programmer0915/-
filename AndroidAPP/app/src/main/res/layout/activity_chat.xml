@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+
+
+        <TextView
+            android:id="@+id/tv_stoptemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_press"
+            android:layout_alignBottom="@+id/tv_press"
+            android:layout_alignParentStart="true"
+            android:text="停止采集" />
+
+        <TextView
+            android:id="@+id/tv_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_stop"
+            android:layout_alignBottom="@+id/tv_stop"
+            android:layout_alignParentEnd="true"
+            android:text="采集温度" />
+
+        <TextView
+            android:id="@+id/tv_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_press"
+            android:layout_alignBottom="@+id/tv_press"
+            android:layout_centerHorizontal="true"
+            android:text="停止音乐" />
+
+        <TextView
+            android:id="@+id/tv_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btnDisconnect"
+            android:layout_below="@+id/btnopen"
+            android:layout_marginTop="16dp"
+            android:text="开灯" />
+
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_open"
+            android:layout_alignBottom="@+id/tv_open"
+            android:layout_alignEnd="@+id/btntemp"
+            android:text="关灯" />
+
+        <TextView
+            android:id="@+id/tv_curtain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btnclosecurtain"
+            android:layout_marginTop="19dp"
+            android:text="开窗帘" />
+
+
+        <TextView
+            android:id="@+id/tv_closecurtain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/hump"
+            android:layout_alignParentEnd="true"
+            android:text="关窗帘" />
+
+        <TextView
+            android:id="@+id/tv_press"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/temp"
+            android:layout_below="@+id/btnpress"
+            android:layout_marginTop="12dp"
+            android:text="长按开灯" />
+
+        <TextView
+            android:id="@+id/tv_press1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_temp"
+            android:layout_alignBottom="@+id/tv_temp"
+            android:layout_alignStart="@+id/btnpress1"
+            android:text="长按关灯" />
+
+        <TextView
+            android:id="@+id/temp"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+
+            android:layout_below="@+id/btnclosecurtain"
+            android:layout_toStartOf="@+id/tv_stop"
+            android:text="温度:null" />
+
+        <TextView
+            android:id="@+id/hump"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignBaseline="@+id/temp"
+            android:layout_alignBottom="@+id/temp"
+            android:layout_marginStart="-26dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toEndOf="@+id/tv_stop"
+            android:text="湿度:null" />
+
+
+        <EditText
+            android:id="@+id/edtTxtMsg"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:hint="输入内容"
+            android:inputType="textPersonName"
+            android:textCursorDrawable="@color/gray" />
+
+        <ListView
+            android:id="@+id/lstViewChatContent"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+
+        <ImageButton
+            android:id="@+id/btnpress"
+            style="@android:style/Widget.ActionButton"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignTop="@+id/btnstoptemp"
+            android:layout_toStartOf="@+id/edtTxtMsg"
+            android:background="#00000000"
+            android:scaleType="centerCrop"
+            android:src="@drawable/press"
+            app:srcCompat="@drawable/press" />
+
+        <ImageButton
+            android:id="@+id/btnpress1"
+            style="@android:style/Widget.ActionButton"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignTop="@+id/btntemp"
+            android:layout_toEndOf="@+id/edtTxtMsg"
+            android:background="#00000000"
+            android:scaleType="centerCrop"
+            android:src="@drawable/press"
+            app:srcCompat="@drawable/press" />
+
+
+        <ImageButton
+            android:id="@+id/btnstop"
+            style="@android:style/Widget.ActionButton"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignTop="@+id/btnpress1"
+            android:layout_centerHorizontal="true"
+            android:background="#00000000"
+            android:scaleType="centerCrop"
+            android:src="@drawable/stop"
+            app:srcCompat="@drawable/stop" />
+
+        <ImageButton
+            android:id="@+id/btnclear"
+            style="@android:style/Widget.ActionButton"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="18dp"
+            android:layout_toStartOf="@+id/btnSendMsg"
+            android:background="#00000000"
+            android:scaleType="centerCrop"
+            android:src="@drawable/clear"
+            app:srcCompat="@drawable/clear" />
+
+        <ImageButton
+            android:id="@+id/btnclose"
+            style="@android:style/Widget.ActionButton"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_above="@+id/btnclosecurtain"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="80dp"
+            android:background="#00000000"
+            android:scaleType="centerCrop"
+            android:src="@drawable/close"
+            app:srcCompat="@drawable/close" />
+
+        <ImageButton
+            android:id="@+id/btnclosecurtain"
+            style="@android:style/Widget.ActionButton"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/btncurtain"
+            android:layout_marginTop="6dp"
+            android:background="#00000000"
+            android:scaleType="centerCrop"
+            android:src="@drawable/closecurtain"
+            app:srcCompat="@drawable/closecurtain" />
+
+        <ImageButton
+            android:id="@+id/btntemp"
+            style="@android:style/Widget.ActionButton"
+            android:layout_width="50dip"
+            android:layout_height="40dip"
+            android:layout_alignStart="@+id/tv_temp"
+            android:layout_below="@+id/tv_closecurtain"
+            android:layout_marginTop="48dp"
+            android:background="#00000000"
+            android:scaleType="centerCrop"
+            android:src="@drawable/temp"
+            app:srcCompat="@drawable/temp" />
+
+        <ImageButton
+            android:id="@+id/btnopen"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/btnclose"
+            android:background="#00000000"
+            android:scaleType="centerCrop"
+            android:src="@drawable/open" />
+
+        <ImageButton
+            android:id="@+id/btnstoptemp"
+            style="@android:style/Widget.ActionButton"
+            android:layout_width="50dip"
+            android:layout_height="40dip"
+            android:layout_alignEnd="@+id/btnDisconnect"
+            android:layout_alignTop="@+id/btntemp"
+            android:background="#00000000"
+            android:scaleType="centerCrop"
+            android:src="@drawable/stoptemp"
+            app:srcCompat="@drawable/stoptemp" />
+
+
+        <ImageButton
+            android:id="@+id/btncurtain"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_above="@+id/edtTxtMsg"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="184dp"
+            android:background="#00000000"
+            android:scaleType="centerCrop"
+            android:src="@drawable/curtain" />
+
+        <ImageButton
+            android:id="@+id/btnDisconnect"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="6dp"
+            android:background="#00000000"
+            android:scaleType="centerCrop"
+            android:src="@drawable/off" />
+
+        <ImageButton
+            android:id="@+id/btnSendMsg"
+            style="@android:style/Widget.ActionButton"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/edtTxtMsg"
+            android:background="#00000000"
+            android:scaleType="centerCrop"
+            android:src="@drawable/send" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
